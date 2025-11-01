@@ -49,9 +49,11 @@
 // Question 1
 
 // 1. Return only name of student in capital
-// 2. Return only details of those who scored more than 60 
+// 2. Return only details of those who scored more than 60
 // 3. More than 60 marks and rollnumber greater than 15
-// 4. 
+// 4. Sum of marks of all student
+// 5. Return only names of students who scored more than 60
+// 6. Return total marks for the students with marks greater than 60 after 20 marks have been added to those who score less than 60 
 
 let students = [
   { name: "Piyush", rollNumber: 31, marks: 80 },
@@ -67,7 +69,7 @@ let students = [
 // })
 // console.log(names);
 
-// 2. Return only details of those who scored more than 60 
+// 2. Return only details of those who scored more than 60
 
 // const details = students.filter((std)=>{
 //    return std.marks > 60
@@ -76,6 +78,28 @@ let students = [
 
 // 3. More than 60 marks and rollnumber greater than 15
 
-const details = students.filter((std)=> std.marks > 60 && std.rollNumber > 15)
+// const details = students.filter((std)=> std.marks > 60 && std.rollNumber > 15)
 
-console.log(details)
+// console.log(details)
+
+// 4. Sum of marks of all student
+
+// const sum = students.reduce((acc, curr) => acc + curr.marks, 0)
+// console.log(sum)
+
+// 5. Return only names of students who scored more than 60
+
+// const names = students.filter((mark) => mark.marks > 60).map((std)=> std.name)
+
+// console.log(names)
+
+
+// 6. Return total marks for the students with marks greater than 60 after 20 marks have been added to those who score less than 60 
+
+const totalMarks = students.map((std)=>{
+    if(std.marks < 60 ){
+        std.marks += 20;
+    }
+    return std;
+}).filter((mark)=> mark.marks > 60).reduce((acc,curr) => acc + curr.marks, 0)
+console.log(totalMarks)
