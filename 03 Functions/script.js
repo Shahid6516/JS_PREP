@@ -1,5 +1,7 @@
 // Functions in javascript
+
 // QUESTIONS
+
 // 1. what is function Declarations?
 // 2. what is function expression?
 // 3. what are first class function
@@ -8,6 +10,11 @@
 // 6. Function scope - O/P Based Question
 // 7. Function Hoisting
 // 8. Function Hoisting - O/P Based Question
+// 9. Params vs Arguments?
+// 10. spread opretor
+// 11. Params vs Arguments - O/P Based Question
+// 12. Callback function
+// 13. Arrow function
 
 // 1. what is function Declarations?
 
@@ -82,9 +89,71 @@
 
 // 8. Function Hoisting - O/P Based Question
 
-var x = 21;
-var fun = function () {
-  console.log(x);
-  var x = 20;
-};
-fun();
+// var x = 21;
+// var fun = function () {
+//   console.log(x);
+//   var x = 20;
+// };
+// fun();
+
+// 9. Params vs Arguments
+
+// function square(num) { // params
+//   return num * num;
+// }
+// square(5)// Arguments
+
+// 10. spread opretor
+
+// function multiply(...nums) { // rest operator
+//   console.log(nums[0]*nums[1]);
+// }
+// var arr = [5,6]
+
+// multiply(...arr)   // spread opreator
+
+// 11. Params vs Arguments - O/P Based Question
+
+// const fn = (a, x, y, ...numbers) => {
+//   console.log(x, y, numbers);
+// };
+// fn(5, 6, 3, 7, 8, 9);
+
+// 12. Callback function
+
+// A callback function is a function that is passed as an argument to another function,
+// and then that other function calls it later (or "calls it back")
+
+// Example👇 -
+
+// document.addEventListener("click",function(params)=>{
+
+// })
+
+//  it can be function like map , Array, reduce etc  (callback function)
+
+// 13. Arrow functions
+
+// arrow function introduce in es6
+
+// diffrence between an arrow function and normal function
+// 1. syntax diffrent
+// 2. Implicit 'return' keyword
+// example 👇-
+// const square = (num) => num * num;
+// 3. arguments
+// example 👇-
+function fn(){
+    console.log(arguments)
+}
+
+fn(1,3,2)
+
+// arguments keyword is avilable in normal function but not in arrow function
+
+const fnArr = ()=>{
+    console.log(arguments)
+}
+
+fn(1,3,2)
+
