@@ -143,17 +143,17 @@
 // const square = (num) => num * num;
 // 3. arguments
 // example 👇-
-function fn(){
-    console.log(arguments)
-}
+// function fn(){
+//     console.log(arguments)
+// }
 
-fn(1,3,2)
+// fn(1,3,2)
 
 // arguments keyword is avilable in normal function but not in arrow function
 
-const fnArr = ()=>{
-    console.log(arguments)
-}
+// const fnArr = ()=>{
+//     console.log(arguments)
+// }
 
-fn(1,3,2)
+// fn(1,3,2)
 
